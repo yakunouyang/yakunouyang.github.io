@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@theme {
+  --font-sans: "SF Pro Text", "Helvetica Neue", "Inter", "Helvetica", "Arial", "sans-serif";
+}
+html {
+  font-size: 24px;
+  letter-spacing: -0.022em;
+}
+@layer base {
+  a {
+    @apply underline decoration-dotted hover:decoration-solid;
+  }
+}
+.item-img {
+  @apply outline-1 outline-zinc-100 group-hover:outline-black group-hover:outline-2 transition-all;
+}
