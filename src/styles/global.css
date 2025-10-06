@@ -3,8 +3,14 @@
   --font-sans: "SF Pro Text", "Helvetica Neue", "Inter", "Helvetica", "Arial", "sans-serif";
 }
 html {
-  font-size: 24px;
-  letter-spacing: -0.022em;
+  font-size: 18px;
+  letter-spacing: -0.011em;
+}
+@media (width >= theme(--breakpoint-lg)) {
+  html {
+    font-size: 24px;
+    letter-spacing: -0.022em;
+  }
 }
 @layer base {
   a {

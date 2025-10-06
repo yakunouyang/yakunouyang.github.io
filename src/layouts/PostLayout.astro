@@ -7,18 +7,18 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title="Yakun Ouyang" pageTitle={frontmatter.title}>
-  <div class="sticky top-0 z-20 h-0">
+  <div class="sticky top-0 z-20 h-0 hidden lg:block">
     <a href="javascript:window.history.back();" class="group absolute left-0 top-0 flex items-center w-24 h-16 no-underline">
       <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
       <div>Home</div>
     </a>
   </div>
-  <div class="grid grid-cols-4 gap-x-8">
+  <div class="lg:grid lg:grid-cols-4 gap-x-8">
     <div class=`item-img ${frontmatter.coverStyle.join(' ')}`>
       <Image src={frontmatter.cover} alt="cover" />
     </div>
-    <div class="col-start-2 col-span-3">
-      <h2 class="text-l h-16 leading-16">{frontmatter.title}</h2>
+    <div class="lg:col-start-2 lg:col-span-3">
+      <h2 class="text-l h-16 lg:leading-16 mt-4 lg:mt-0">{frontmatter.title}</h2>
       <div class="text-xs">
         <slot />
       </div>
