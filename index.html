@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yakun Ouyang</title>
+  <link rel="icon" type="image/png" href="public/memoji_up.png" />
+  <style media="screen">
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      background-color: #fff;
+    }
+
+    section,
+    footer {
+      max-width: 880px;
+      margin: 2em auto;
+      line-height: 1.5;
+      color: #222;
+      padding: 0 10px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: 0;
+      margin-bottom: 0.5em;
+    }
+
+    h2 {
+      margin: 0.5em 0 0 0;
+    }
+
+    p {
+      margin: 0.5em 0 1em 0;
+    }
+
+    a {
+      color: #334155;
+      text-decoration-line: underline;
+      text-decoration-style: dotted;
+      text-decoration-color: #94a3b8;
+    }
+
+    a:hover {
+      text-decoration-style: solid;
+    }
+
+    #memoji {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 9999px;
+      background-color: rgb(244, 244, 245);
+      background-image: url('public/memoji_wink.png');
+      background-size: 66.7% 66.7%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    #memoji:hover {
+      background-image: url('public/memoji_thumbup.png');
+    }
+
+    #links {
+      margin-top: 30px;
+    }
+
+    footer {
+      text-align: center;
+      color: #888;
+    }
+
+    div.projects {
+      padding: 1em 0 2em 0;
+      background-color: #f5f5f7;
+    }
+
+    .projects section {
+      margin: 0 auto;
+    }
+
+    .projects .item {
+      display: flex;
+      flex-direction: row;
+      margin: 2em 0;
+    }
+
+    .projects .item img {
+      width: 30%;
+      background-color: white;
+      padding: 1em;
+      border: 1px solid #eee;
+      border-radius: 0.5em;
+      margin-right: 1em;
+      align-self: flex-start;
+      box-sizing: border-box;
+    }
+
+    @media (width <=40rem) {
+      .projects .item {
+        flex-direction: column;
+      }
+
+      .projects .item img {
+        width: 100%;
+        margin-bottom: 1em;
+      }
+    }
+
+    .projects .item h2 {
+      font-size: 1em;
+      margin: 0;
+    }
+
+    .projects .item p {
+      margin: 0;
+    }
+
+    .projects .item p.journal {
+      font-style: italic;
+    }
+
+    .projects .item p.authors span {
+      font-weight: bold;
+    }
+
+    .projects .item p.abstract {
+      margin: 0.5em 0;
+    }
+
+    .projects .item p.links {
+      color: #aaa;
+    }
+  </style>
+  <link rel="preload" href="public/memoji_thumbup.png" as="image" />
+</head>
+
+<body>
+  <section>
+    <div id="memoji"></div>
+    <h1>Yakun Ouyang</h1>
+    <p>
+      I'm currently a Senior Engineer at <a href="https://github.com/apolloauto" target="_blank">Baidu Apollo</a>,
+      working
+      on
+      Interactive Decision Making for <a href="https://www.apollogo.com/" target="_blank">Apollo GO</a> robotaxis.
+
+      Before that, I did my M.E. in Mechanical Engineering at Hunan University, under the supervision of Prof. <a
+        href="https://scholar.google.com/citations?user=NB55MIQAAAAJ" target="_blank">Bai Li</a>, and B.E. in Automation
+      at Nanchang University.
+    </p>
+
+    <p>
+      🐙 GitHub: <a href="https://github.com/yakunouyang" target="_blank">yakunouyang</a><br>
+      🎓 Google Scholar: <a href="https://scholar.google.com/citations?user=RI23DrEAAAAJ" target="_blank">Yakun
+        Ouyang</a><br>
+      💌 Email: <a href="mailto:yakun@hnu.edu.cn">yakun [at] hnu.edu.cn</a>
+    </p>
+  </section>
+
+  <div class="projects">
+    <section>
+      <h2>Research</h2>
+      <p>I'm interested in high-performance and differentiable solution methods for robot learning and optimal control.
+      </p>
+      <div class="item">
+        <img src="assets/mvtp.svg">
+        <div>
+          <h2>Fast and Optimal Trajectory Planning for Multiple Vehicles in a Nonconvex and Cluttered Environment:
+            Benchmarks, Methodology, and Experiments</h2>
+          <p class="journal">International Conference on Robotics and Automation (ICRA), 2022</p>
+          <p class="authors"><span>Yakun Ouyang</span>, <a href="https://scholar.google.com/citations?user=NB55MIQAAAAJ"
+              target="_blank">Bai Li</a>, Tankut Acarman, Yuqing Guo, and Tantan Zhang</p>
+          <p class="abstract">Proposed adaptive-scaling constraints for Multi-vehicle Trajectory Planning (MVTP)
+            problems, enabling evaluation of optimal solutions through decoupled iterations, addressing the
+            computational challenge
+            introduced by multiple vehicles.</p>
+          <p class="links"><a href="https://ieeexplore.ieee.org/document/9812126" target="_blank">Link</a> /
+            <a href="https://github.com/libai1943/MVTP_Benchmark" target="_blank">Code</a> / <a
+              href="https://www.bilibili.com/video/BV1k3411q78m" target="_blank">Video</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="assets/cartesian_planner.png" style="padding: 0; border: 0;">
+        <div>
+          <h2>Autonomous Driving on Curvy Roads Without Reliance on Frenet Frame: A Cartesian-Based Trajectory Planning
+            Method</h2>
+          <p class="journal">IEEE Transactions on Intelligent Transportation Systems, 2022</p>
+          <p class="authors"><a href="https://scholar.google.com/citations?user=NB55MIQAAAAJ" target="_blank">Bai
+              Li</a>, <span>Yakun Ouyang</span>, Li Li, Youmin Zhang</p>
+          <p class="abstract">Proposed a hierarchical planning approach for on-road autonomous driving, where an S–L–T dynamic
+            programming framework generates a series of convex sets, and a lightweight iterative optimization method plans the
+            vehicle’s motion in Cartesian space.</p>
+          <p class="links"><a href="https://doi.org/10.1109%2FTITS.2022.3145389" target="_blank">Link</a> /
+            <a href="https://github.com/libai1943/CartesianPlanner" target="_blank">Code</a> / <a
+              href="https://www.bilibili.com/video/BV1X54y1m7mr" target="_blank">Video</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="assets/minlp.svg" style="padding: 0;">
+        <div>
+          <h2>Mixed-integer and Conditional Trajectory Planning for an Autonomous Mining Truck in Loading/Dumping
+            Scenarios: A Global Optimization Approach</h2>
+          <p class="journal">IEEE Transactions on Intelligent Vehicles, 2023</p>
+          <p class="authors"><a href="https://scholar.google.com/citations?user=NB55MIQAAAAJ" target="_blank">Bai
+              Li</a>, <span>Yakun Ouyang</span>, Li Li, Xiaohui Li, Dongpu Cao, Tantan Zhang, Yaonan Wang</p>
+          <p class="abstract">Proposed a coarse-to-fine approach to solve complex mixed-integer nonlinear program for
+            heavy-duty
+            trucks, a search-based method find a near-optimal coarse trajectory satisfying mixed-integer costs and
+            constraints,
+            which is further polished with a small-scale NLP simplified from original mixed-integer problem.</p>
+          <p class="links"><a href="https://ieeexplore.ieee.org/abstract/document/9919391/" target="_blank">Link</a> /
+            <a href="https://www.bilibili.com/video/BV13g411X7ho" target="_blank">Video</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <p>to be continued...</p>
+  </section>
+
+  <footer> <span>Updated on Oct 26, 2025</span></footer>
+</body>
+
+</html>
